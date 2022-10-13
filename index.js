@@ -16,7 +16,8 @@ function onSignIn(googleUser) {
     }
     else {
         document.getElementById('error').style.display = "block";
-        signOut();
+        window.location.href = './index.html';
+
     }
 
 }
