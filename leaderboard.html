@@ -7,7 +7,7 @@
     <title>Leaderboard</title>
     <link rel="stylesheet" href="leaderboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-      <script src="./index.js" defer></script>
+      <!-- <script src="./index.js" defer></script> -->
       <script src="./leaderboard.js" defer></script>
 
 </head>
@@ -72,26 +72,26 @@
 
            <main>
 <script>
-window.addEventListener("load", checkAdmin, false);
+// window.addEventListener("load", checkAdmin, false);
 
-async function checkAdmin(){
-         const response = await fetch('https://bernardcirc-default-rtdb.firebaseio.com/admins.json');
-         let jsonResponse = await response.json();
-    if(jsonResponse.includes(localStorage.getItem('email'))){
-document.getElementById('admin').innerHTML = ` 
-    <a href="./adminPage.html" class="nav-link">
-      <svg width="123" height="123" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-              d="M68.9303 74.3014L70.6903 70.7039L74.329 68.9107C78.7982 66.7082 84.2828 67.4598 87.9304 71.1074L116.035 99.2117C117.162 100.339 117.184 102.21 116.026 103.383C116.024 103.385 116.022 103.387 116.02 103.389L103.387 116.023L103.379 116.03L103.372 116.037C102.246 117.171 100.393 117.192 99.2237 116.023L71.1194 87.9184C67.4826 84.2816 66.7328 78.7934 68.9303 74.3014ZM40.0925 37.9444V40.0805H37.9564H26.0523L7.93426 15.9232L15.9352 7.92226L40.0925 26.0403V37.9444ZM41.0778 68.5593L48.2544 75.7359C47.8207 79.5915 48.1469 83.4202 49.0705 87.0578L27.0266 109.102C27.0963 108.584 27.1322 108.057 27.1322 107.521C27.1322 101.015 21.8779 95.7611 15.3722 95.7611C14.8351 95.7611 14.3066 95.7969 13.7888 95.8663L41.0778 68.5593ZM98.1961 48.6631L101.241 49.1698L103.424 46.9871L116.87 33.5412C117.15 41.1969 114.367 48.9295 108.523 54.774C106.965 56.3315 105.245 57.6529 103.406 58.7644L101.84 57.198C95.9122 51.2706 88.0011 48.0006 79.6209 48.0006C78.3248 48.0006 77.0204 48.084 75.7268 48.2454L60.0348 32.5533C60.4329 25.8657 63.0995 19.3906 68.1193 14.3708C73.956 8.53403 81.7082 5.75186 89.3864 6.03746L75.9302 19.4936L73.7475 21.6763L74.2543 24.7212L76.9663 41.0174L77.6702 45.2471L81.8999 45.951L98.1961 48.6631Z"
-              stroke="black" stroke-width="12" />
-      </svg>
+// async function checkAdmin(){
+//          const response = await fetch('https://bernardcirc-default-rtdb.firebaseio.com/admins.json');
+//          let jsonResponse = await response.json();
+//     if(jsonResponse.includes(localStorage.getItem('email'))){
+// document.getElementById('admin').innerHTML = ` 
+//     <a href="./adminPage.html" class="nav-link">
+//       <svg width="123" height="123" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path
+//               d="M68.9303 74.3014L70.6903 70.7039L74.329 68.9107C78.7982 66.7082 84.2828 67.4598 87.9304 71.1074L116.035 99.2117C117.162 100.339 117.184 102.21 116.026 103.383C116.024 103.385 116.022 103.387 116.02 103.389L103.387 116.023L103.379 116.03L103.372 116.037C102.246 117.171 100.393 117.192 99.2237 116.023L71.1194 87.9184C67.4826 84.2816 66.7328 78.7934 68.9303 74.3014ZM40.0925 37.9444V40.0805H37.9564H26.0523L7.93426 15.9232L15.9352 7.92226L40.0925 26.0403V37.9444ZM41.0778 68.5593L48.2544 75.7359C47.8207 79.5915 48.1469 83.4202 49.0705 87.0578L27.0266 109.102C27.0963 108.584 27.1322 108.057 27.1322 107.521C27.1322 101.015 21.8779 95.7611 15.3722 95.7611C14.8351 95.7611 14.3066 95.7969 13.7888 95.8663L41.0778 68.5593ZM98.1961 48.6631L101.241 49.1698L103.424 46.9871L116.87 33.5412C117.15 41.1969 114.367 48.9295 108.523 54.774C106.965 56.3315 105.245 57.6529 103.406 58.7644L101.84 57.198C95.9122 51.2706 88.0011 48.0006 79.6209 48.0006C78.3248 48.0006 77.0204 48.084 75.7268 48.2454L60.0348 32.5533C60.4329 25.8657 63.0995 19.3906 68.1193 14.3708C73.956 8.53403 81.7082 5.75186 89.3864 6.03746L75.9302 19.4936L73.7475 21.6763L74.2543 24.7212L76.9663 41.0174L77.6702 45.2471L81.8999 45.951L98.1961 48.6631Z"
+//               stroke="black" stroke-width="12" />
+//       </svg>
 
-        <span class="link-text">Admin Page</span>
+//         <span class="link-text">Admin Page</span>
 
-    </a>
-`;
-    }
-    }
+//     </a>
+// `;
+//     }
+//     }
 </script>
 </body>
 </html>
